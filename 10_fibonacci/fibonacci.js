@@ -1,5 +1,14 @@
-const fibonacci = function() {
+const fibonacci = function(n) {
+    if (n < 0) return "Not funny";
+    if (n === 0) return 0;
 
+    let a = 0, b = 1;
+    for (let i = 1; i < n; i++) {
+        const temp = b;
+        b = a + b;
+        a = temp;
+    }
+    return b;
 };
 
 // Do not edit below this line
